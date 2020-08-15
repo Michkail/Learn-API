@@ -1,0 +1,20 @@
+{% extends "control_base.html" %}
+
+{% block content %}
+    <div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-0 main">
+        <div class="page-header">
+            <h1>{{ newsletter.subject }}</h1>
+        </div>
+        {{ newsletter.body }}
+        <div class="col-sm-8 col-sm-offset-4">
+            <div class="col-sm-2 mr-4">
+                <a href='{% url "control_panel:control_newsletter_edit" pk=newsletter.pk %}'><button class="btn btn-info btn-lg"><strong>Edit</strong></button></a>
+            </div>
+            <div class="col-sm-2 mr-4">
+                <a href='{% url "control_panel:control_newsletter_delete" pk=newsletter.pk %}'><button class="btn btn-danger btn-lg"><strong>Delete</strong></button></a></div>
+            <div class="col-sm-2 ml-4">
+                <a href='{% url "control_panel:control_newsletter" %}'><button class="btn btn-success btn-lg"><strong>New</strong></button></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

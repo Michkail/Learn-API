@@ -1,0 +1,213 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/dashboard/">
+
+    <title>Dashboard</title>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}">
+<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' >
+
+
+    <link rel='stylesheet' href='{% static "css/base.css" %}' />
+<!-- New -->
+    <link rel="stylesheet" href='{% static "css/open-iconic-bootstrap.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/animate.css" %}'>
+
+    <link rel="stylesheet" href='{% static "css/owl.carousel.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/owl.theme.default.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/magnific-popup.css" %}'>
+
+    <link rel="stylesheet" href='{% static "css/aos.css" %}'>
+
+    <link rel="stylesheet" href='{% static "css/ionicons.min.css" %}'>
+
+    <link rel="stylesheet" href='{% static "css/bootstrap-datepicker.css" %}'>
+    <link rel="stylesheet" href='{% static "css/jquery.timepicker.css" %}'>
+
+    <link rel="stylesheet" href='{% static "css/flaticon.css" %}'>
+    <link rel="stylesheet" href='{% static "css/icomoon.css" %}'>
+    <link rel="stylesheet" href='{% static "css/style.css" %}'>.
+
+
+
+  <body>
+    <div id="row colorlib-page" class='container'>
+      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i class="mr"></i></a>
+      <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+        
+        <nav id="colorlib-main-menu" role="navigation" class="breadcrumb">
+          <ul>
+            <li><a href='#'>Report</a></li>
+            <li><a href='#'>Analytics</a></li>
+            <li><a href='#'>Export</a></li>
+            <li><a href='{% url "control_panel:control_newsletter_list" %}'>Newsletter</a></li>
+            <li><a href='#'>Nav item again</a></li>
+            <li><a href='#'>One more nav</a></li>
+            <li><a href='#'>Another nav item</a></li>
+            <li><a href='#'>More navigation</a></li>
+            <li><a href='#'>Nav item again</a></li>
+            <li><a href='#'>One more nav</a></li>
+            <li><a href='#'>Another nav item</a></li>
+          </ul>
+        </nav>
+        
+      </aside>
+    </div>
+
+    <div id="colorlib-main">
+			<section class="ftco-section ftco-no-pt ftco-no-pb">
+	    	<div class="container">
+	    		<div class="row d-flex">
+	    			<div class="col-xl-8 py-5 px-md-5">
+	    				{% block content %}
+              {% endblock content %}
+			    	</div>
+	    			<div class="col-xl-4 sidebar ftco-animate bg-light pt-5">
+	            <div class="sidebar-box pt-md-4">
+                <form method='GET' action='' class='search-form'>
+	                <div class='form-group'>
+	                  <span class='icon icon-search'></span>
+	                  <input type='text' class='form' name='q' placeholder='Search posts' value='{{ request.GET.q }}'/>
+	                </div>
+	              </form>
+	            </div>
+	            <div class="sidebar-box ftco-animate">
+	            	<h3 class="sidebar-heading"><strong>Navigator</strong></h3>
+	              <ul class="categories">
+                  <li>
+                    <div class="block-21 mb-4 d-flex">
+                      <div class="text">
+                        <h3 class="heading"><a href="#">Dashboard</a></h3>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="block-21 mb-4 d-flex">
+                      <div class="text">
+                        <h3 class="heading"><a href="#">Settings</a></h3>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="block-21 mb-4 d-flex">
+                      <div class="text">
+                        <h3 class="heading"><a href="#">Profile</a></h3>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="block-21 mb-4 d-flex">
+                      <div class="text">
+                        <h3 class="heading"><a href="#">Help</a></h3>
+                      </div>
+                    </div>
+                  </li>
+	              </ul>
+	            </div>
+
+	          </div><!-- END COL -->
+	    		</div>
+	    	</div>
+	    </section>
+		</div>
+    
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-1.12.2.min.js"   integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js'></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".content-markdown").each(function(){
+                var content = $(this).text()
+                var markedContent = marked(content)
+                $(this).html(markedContent)
+        })
+        $(".post-detail-item img").each(function(){
+                $(this).addClass("img-responsive");
+        })
+
+
+
+        var contentInput = $("#id_content");
+
+        function setContent(value){
+            var markedContent = marked(value)
+            $("#preview-content").html(markedContent)
+            $("#preview-content img").each(function(){
+                $(this).addClass("img-responsive")
+            })
+        }
+        setContent(contentInput.val())
+
+        contentInput.keyup(function(){
+            var newContent = $(this).val()
+            setContent(newContent)
+        })
+
+        var titleInput = $("#id_title");
+
+
+
+        function setTitle(value) {
+            $("#preview-title").text(value)
+        }
+        setTitle(titleInput.val())
+
+        titleInput.keyup(function(){
+            var newContent = $(this).val()
+            setTitle(newContent)
+        })
+
+        $(".comment-reply-btn").click(function(event){
+            event.preventDefault();
+            $(this).parent().next(".comment-reply").fadeToggle();
+        })
+
+
+    // preview-title
+    // preview-content
+
+    })
+
+    </script>
+
+    <script src='{% static "js/jquery.min.js" %}'></script>
+    <script src='{% static "js/jquery-migrate-3.0.1.min.js" %}'></script>
+    <script src='{% static "js/popper.min.js" %}'></script>
+    <script src='{% static "js/bootstrap.min.js" %}'></script>
+    <script src='{% static "js/jquery.easing.1.3.js" %}'></script>
+    <script src='{% static "js/jquery.waypoints.min.js" %}'></script>
+    <script src='{% static "js/jquery.stellar.min.js" %}'></script>
+    <script src='{% static "js/owl.carousel.min.js" %}'></script>
+    <script src='{% static "js/jquery.magnific-popup.min.js" %}'></script>
+    <script src='{% static "js/aos.js" %}'></script>
+    <script src='{% static "js/jquery.animateNumber.min.js" %}'></script>
+    <script src='{% static "js/scrollax.min.js" %}'></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src='{% static "js/google-map.js" %}'></script>
+    <script src='{% static "js/main.js" %}'></script>
+  </body>
+</html>
+ 

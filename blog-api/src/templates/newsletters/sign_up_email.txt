@@ -1,0 +1,1 @@
+Selamat datang, fitur Newsletter telah bisa digunakan. bila ada bug/error/semacamnya bisa debugging sendiri karna ini sifatnya open source http://127.0.0.1:8000/newsletter/unsubscribe
